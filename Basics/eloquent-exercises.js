@@ -2,6 +2,7 @@
 
 // loopTriangle(5);
 // fizzBuzz(20)
+console.log(sum(range(1,5,2)))
 
 
 function loopTriangle(lines) {
@@ -42,4 +43,35 @@ function fizzBuzz(maxNumber) {
 }
 
 
+/*
+  Returns range between number including themselves.
+*/
+function range(start,end,step = 1) {
 
+	var absoluteStep = Math.abs(step)
+
+	var listOfNumbers = []
+
+	for (i = start ; i <= end; i+=absoluteStep ) {
+		listOfNumbers.push(i)
+	}
+
+	return listOfNumbers
+
+}
+
+
+
+/*
+  Returns the sum of the numbers
+*/
+function sum (numbers) {
+	
+	var totalSum = 0
+
+	for (let number of numbers) {
+		totalSum+=number
+	}
+
+	return totalSum
+}
